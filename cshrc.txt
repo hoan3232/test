@@ -1,0 +1,1 @@
+alias cd  'set old=$cwd; chdir \!*; set cdcwd=`expr "/$cwd" : "$cdexpr"`;clear;ls --color; set prompt="\n%B[%Y-%W-%D @ %T]%b: %~\n>> "'
