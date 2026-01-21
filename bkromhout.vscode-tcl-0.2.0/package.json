@@ -1,0 +1,44 @@
+{
+	"name": "vscode-tcl",
+	"displayName": "Tcl",
+	"description": "Tcl syntax highlighting",
+	"version": "0.2.0",
+	"publisher": "bkromhout",
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bkromhout/vscode-tcl.git"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "tcl",
+				"aliases": [
+					"Tcl",
+					"tcl"
+				],
+				"extensions": [
+					".tcl"
+				],
+				"configuration": "./tcl.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "tcl",
+				"scopeName": "source.tcl",
+				"path": "./syntaxes/tcl.tmLanguage"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1768964474498,
+		"targetPlatform": "undefined",
+		"size": 33955
+	}
+}
