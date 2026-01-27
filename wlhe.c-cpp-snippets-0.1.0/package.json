@@ -1,0 +1,56 @@
+{
+	"name": "c-cpp-snippets",
+	"displayName": "C/Cpp Snippets",
+	"description": "Snippets for C/C++ ",
+	"version": "0.1.0",
+	"publisher": "wlhe",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "c",
+				"path": "./snippets/c_cpp_snippets.json"
+			},
+			{
+				"language": "cpp",
+				"path": "./snippets/c_cpp_snippets.json"
+			},
+			{
+				"language": "cpp",
+				"path": "./snippets/cpp_snippets.json"
+			},
+			{
+				"language": "h",
+				"path": "./snippets/c_cpp_snippets.json"
+			},
+			{
+				"language": "h",
+				"path": "./snippets/cpp_snippets.json"
+			},
+			{
+				"language": "hpp",
+				"path": "./snippets/c_cpp_snippets.json"
+			},
+			{
+				"language": "hpp",
+				"path": "./snippets/cpp_snippets.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wlhe/vscode/tree/master/Snippets/c-cpp-snippets"
+	},
+	"icon": "images/cpp.png",
+	"license": "https://github.com/wlhe/vscode/blob/master/.gitignore",
+	"__metadata": {
+		"installedTimestamp": 1769502755627,
+		"targetPlatform": "undefined",
+		"size": 49287
+	}
+}
