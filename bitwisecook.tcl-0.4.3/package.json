@@ -1,0 +1,107 @@
+{
+	"name": "tcl",
+	"displayName": "Tcl",
+	"description": "Tcl language support",
+	"version": "0.4.3",
+	"keywords": [
+		"tcl",
+		"tk"
+	],
+	"publisher": "bitwisecook",
+	"bugs": {
+		"url": "https://github.com/bitwisecook/tcl.git/LICENSE"
+	},
+	"license": "MIT",
+	"icon": "images/Tcl-powered.png",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bitwisecook/tcl.git"
+	},
+	"categories": [
+		"Formatters",
+		"Other",
+		"Programming Languages",
+		"Snippets"
+	],
+	"activationEvents": [
+		"onLanguage:tcl"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "tcl",
+				"aliases": [
+					"Tcl",
+					"tcl"
+				],
+				"extensions": [
+					".tcl",
+					".tm",
+					".test"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "tcl.escapeToQuotedTcl",
+				"title": "Escape Selections to Tcl Quoted String",
+				"category": "Tcl"
+			}
+		],
+		"grammars": [
+			{
+				"language": "tcl",
+				"scopeName": "source.tcl",
+				"path": "./out/syntaxes/tcl.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "tcl",
+				"path": "./snippets/tcl.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production && npx js-yaml syntaxes/tcl.tmlanguage.yaml > out/syntaxes/tcl.json",
+		"webpack": "webpack --mode development && npx js-yaml syntaxes/tcl.tmlanguage.yaml > out/syntaxes/tcl.json",
+		"webpack-dev": "webpack --mode development --watch && npx js-yaml syntaxes/tcl.tmlanguage.yaml > out/syntaxes/tcl.json",
+		"test-compile": "tsc -p ./ && npx js-yaml syntaxes/tcl.tmlanguage.yaml > out/syntaxes/tcl.json",
+		"watch": "tsc -watch -p ./",
+		"lint": "eslint src --ext ts",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^8.0.1",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "^18.14.0",
+		"@types/vscode": "^1.74.0",
+		"@typescript-eslint/eslint-plugin": "^5.53.0",
+		"@typescript-eslint/parser": "^5.53.0",
+		"@vscode/test-electron": "^2.2.3",
+		"@vscode/vsce": "^2.17.0",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"glob": "^8.1.0",
+		"mocha": "^10.2.0",
+		"prettier": "^2.8.4",
+		"ts-loader": "^9.4.2",
+		"typescript": "^4.9.5",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.1"
+	},
+	"dependencies": {
+		"js-yaml": "^4.1.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1769501869052,
+		"targetPlatform": "undefined",
+		"size": 835293
+	}
+}
